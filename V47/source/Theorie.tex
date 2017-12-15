@@ -1,0 +1,82 @@
+\section{Ziel}
+Im folgenden werden drei Modelle vorgestellt, welche Näherungen zur Temperaturabhängigkeit
+der Molwärme von Festkörpern geben. Daraufhin wird die Molwärme gemessen und so das Debye-Modell
+untersucht werden.
+
+\section{Theorie}
+\subsection{Klassisches Modell}
+Das klassische Modell geht davon aus, dass Molwärme sich gleichmäßig auf alle Freiheitsgrade
+der Atome verteilt. Jedes Atom hat so eine Energie von $\frac{1}{2}k_BT$ pro Freiheitsgrad.
+Im Kristallgitter hat jedes Atom drei Freiheitsgrade und somit eine Energie von
+\begin{equation}
+  \langle u \rangle = \frac{6}{2}k_BT.
+\end{equation}
+
+Für einen Mol gilt somit
+\begin{equation}
+  U = 3k_B N_L T = RT,
+\end{equation}
+mit der Loschmidtschen Zahl $N_L$ und der allgemeinen Gaskonstanten $R$.
+Durch Ableiten lässt sich die spezifische Molwärme berechnen.
+\begin{equation}
+  C_v = \left(\frac{\partial U}{\partial T}\right) = 3R
+\end{equation}
+
+Offensichtlich widerspricht dies den Erwartungen, da die spezifische Molwärme temperatur-
+und materialunanbhängig ist. Allerdings gehen im Allgemeinen die Grenzwerte der spezifischen Molwärme
+gegen $3R$.
+
+\subsection{Modell nach Einstein}
+Das Einsteinsche Modell beachtet, dass die Schwinungsenergie gequantelt ist, indem sie
+die Annahme trifft, dass alle Atome mit der Kreisfrequenz $\omega$ schwingen.
+Außerdem werden nur ganzzahlige vielfache der Energie $\hbar\omega$ angenommen.
+Mit der Wahrscheinlichkeit, dass ein Oszillator die Energie $n\hbar\omega$ hat
+\begin{equation}
+  W(n) = \exp{-\frac{n\hbar\omega}{k_BT}}
+\end{equation}
+kann die mittlere Energie berechnet werden.
+\begin{gather}
+  \langle u \rangle = \frac{\sum_{n=0}^{\inf} n\hbar\omega \exp-\frac{n\hbar\omega}{k_BT}}{\sum_{n=0}^{\inf} \exp-\frac{n\hbar\omega}{k_BT}} \\
+  \langle u \rangle = \frac{\hbar\omega}{\exp\frac{\hbar\omega}{k_B T} - 1} < k_B T
+\end{gather}
+Durch für die spezifische Wärme ergibt sich durch Ableiten
+\begin{equation}
+  C_{vE} = 3R \left(\frac{1}{T}\frac{\hbar\omega}{k_B}\right)^2 \frac{\exp{\frac{\hbar\omega}{k_BT}}}{\left(\exp{\frac{\hbar\omega}{k_BT}-1}\right)^2}
+\end{equation}
+
+Wie im klassischen Modell geht der Limes für $T$ gegen $\inf$ gegen $3R$.
+Besonders im Bereich tiefer Temperaturen ist diese Näherung nicht sehr genau, da die
+Atome tatsächlich mit verschiedenen Frequenzen schwingen.
+
+\subsection{Debye-Modell}
+Das Debye-Modell ersetzt man die Frequenz mit einer Frequenzverteilung $Z(\omega)$.
+Diese ist
+\begin{align}
+  Z(\omega)\symup{d}\omega  &= \frac{3L^3}{2\pi^2v^3}\omega^2 \symup{d}\omega \text{ oder }& Z(\omega)\symup{d}\omega  &= \frac{3L^3}{2\pi^2}\omega^2 \left( \frac{1}{v_l^3} + \frac{1}{v_t^3}\right) \symup{d}\omega
+\end{align}
+wenn man die longitudinal und transversal Geschwindigkeiten unterscheidet.
+Da ein Kristall endlich viel Atome hat folgt, dass er auch endlich viele Eigenschwingungen hat.
+Deshalb gibt es die Grenzfrequenz $\omega_D$, die Debye-Frequenz.
+Sie ist gegeben durch
+\begin{equation}
+  \int_0^{\omega_D} Z(\omega)\symup{d} = 3N_L
+\end{equation}
+Daraus folgt
+\begin{align}
+  \omega_D^3 &= \frac{6 \pi^2 v^3 N_L}{L^3} &\text{ oder } \omega_D^3 &= \frac{18 \pi^2  N_L}{L^3} \frac{1}{\frac{1}{v_l^3}+\frac{1}{v_t^3}}
+\end{align}
+
+So ergibt sich für die Verteilung der Frequenzen
+\begin{equation}
+  Z(\omega)\symup{d}\omega = \frac{9N_L}{\omega_D^3}\omega^2 \symup{d}\omega
+\end{equation}
+und für die spezifische Molwärme, mit $x = \frac{\hbar\omega}{k_BT}$ und $\frac{\theta_D}{T} = \frac{\hbar\omega_D}{k_BT}$,
+\begin{equation}
+  C_{vD} = 9R \left( \frac{\theta_D}{T}\right)^3 \int_0^{\omega_D/T} \frac{x^4 \exp{x}}{\left(\exp{x}-1\right)} \symup{d}x.
+\end{equation}
+
+$\theta_D$ ist die sogenannte Debye-Temperatur. Sie ist eine materialspezifische Größe.
+
+\bigskip
+Wie im klassischem und im einsteinschem Modell geht die spezifische Molwärme auch im
+Debye-Modell gegen $3R$ für T gegen $\inf$.
