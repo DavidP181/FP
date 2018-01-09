@@ -3,18 +3,28 @@ import uncertainties.unumpy as unp
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
-R_p, R_r, I_p, U_p, I_r, U_r = np.genfromtxt('Daten/widerstand1.txt', unpack = True)
+R_p, err_Rp, R_r, err_Rr, I_p, err_Ip, U_p, err_Up, I_r, U_r = np.genfromtxt('Daten/widerstand1.txt', unpack = True)
 T_a, alpha_2 = np.genfromtxt('Daten/alpha.txt', unpack = True)
 alpha_2 = alpha_2 * 10**(-6)
 T_a = T_a + 273.15
 I_p = I_p * 0.001
 t = np.zeros(32)
+err_t = np.zeros(32)
 m = 0.342
 rho = 8920
 V_0 = m/rho
 kappa = 443
 M = 63.55
 n = 342/M
+for i in range(0,31):
+    t[i] = (i+1)*300
+    err_t[i] = 5
+
+R_p = unp.uarray(R_p, err_Rp)
+R_r = unp.uarray(R_r, err_Rr)
+t = unp.uarray(t, err_t)
+U_p = unp.uarray(U_p, err_Up)
+I_p = unp.uarray(I_p, err_Ip)
 
 def a_func(T, a, b, c, d, e):
     return a*T**4+b*T**3+c*T**2+d*T+e
@@ -47,15 +57,16 @@ param_a, cov_a = curve_fit(a_func, T_a, alpha_2)
 #    else: return 0
 
 
-for i in range(0,31):
-    t[i] = (i+1)*300
+
+
 
 
 T = 0.00134 * R_p**2 + 2.296*R_p - 243.02 + 273.15
+T2 = 0.00134 * R_r**2 + 2.296*R_r - 243.02 + 273.15
 print(T)
 x = np.zeros(32)
-C_p = x
-C_v = x
+C_p = unp.uarray(x,x)
+C_v = unp.uarray(x,x)
 
 for i in range(1, 31):
     C_p[i] = (I_p[i-1] * U_p[i-1] * 300)/(n*(T[i]-T[i-1]))
@@ -69,17 +80,20 @@ for i in range(1, 31):
     a= -9 * a_func(T[i], *param_a)**2 * kappa * V_0 * T[i]
     print(a)
 
-
-np.savetxt('Tabellen/C_V_und_C_P.txt', np.column_stack([t, C_v, C_p]))
+np.savetxt('Tabellen/Temp.txt', np.column_stack([unp.nominal_values(t), unp.std_devs(t),unp.nominal_values(T), unp.std_devs(T), unp.nominal_values(T2), unp.std_devs(T2)]))
+np.savetxt('Tabellen/C_V_und_C_P.txt', np.column_stack([unp.nominal_values(t), unp.std_devs(t) , unp.nominal_values(C_v), unp.std_devs(C_v), unp.nominal_values(C_p), unp.std_devs(C_p)]))
 
 def f(T, a, b):
     return a*T+b
 
-param, cov = curve_fit(f, T[15:31], C_v[15:31])
+param, cov = curve_fit(f, unp.nominal_values(T), unp.nominal_values(C_v))
 print(*param)
 T_test = np.linspace(150,300, 300)
 #print(C_v)
 #print(f(T, *param))
-plt.plot(T[15:31], C_v[15:31], 'bx', label = 'Messung')
-plt.plot(T_test, f(T_test, *param), 'r-', label = 'Regression')
+#plt.plot(T[15:31], C_v[15:31], 'bx', label = 'Messung')
+plt.errorbar(unp.nominal_values(T), unp.nominal_values(C_v),yerr=unp.std_devs(C_v), xerr=unp.std_devs(T), fmt='bx', label = 'Messung')
+#plt.plot(T_test, f(T_test, *param), 'r-', label = 'Regression')
+plt.xlabel('T/K')
+plt.ylabel('$C_V$ Kmol/J')
 plt.savefig('Bilder_Plots/plot1.pdf')
