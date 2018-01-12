@@ -12,7 +12,7 @@ Aus diesen Werten lassen sich mit Gleichung () und () die jeweiligen Molwärmen 
 konstantem Druck bzw. Volumen berechnen. Die Ergebnisse sind in Tabelle [3] zu sehen.
 Die Werte bei konstantem Druck unterscheiden sich kaum von den Werten mit konstantem Volumen.
 Allerdings sind die Fehlerbereiche bei ca. einem Drittel der berechneten Werte.
-Die berechnete Molwärme bleibt zunächst zwischen $\SI{15-20}{\joule\per\kelvin\mol}$, steigt aber
+Die berechnete Molwärme bleibt zunächst zwischen $\SI{15}{\joule\per\kelvin\mol} - \SI{20}{\joule\per\kelvin\mol}$, steigt aber
 ab $\SI{270}{\kelvin}$ stark an.
 
 Der theoretische Grenzwert der Molwärme liegt bei
@@ -20,7 +20,11 @@ Der theoretische Grenzwert der Molwärme liegt bei
   C_V = 3R = \SI{24,942}{\joule\per\kelvin\mol}.
 \end{equation}
 Dieser wird ab $\SI{266,7}{\kelvin}$ überschritten.
+
+
 \subsection{Bestimmung der Debyetemperatur}
+
+\input{Tabellen/Widerstand2.tex}
 In Tabelle [] ist eine zweite Messreihe aufgeführt, aus der die Wärmekapazität $C_V$ erneut bestimmt wird.
 Die Debye-Temperatur wird mithilfe der Tabelle 1 aus der Anleitung bestimmt.
 Dabei werden nur Messwerte betrachtet, bei denen die Temperatur der Probe kleiner als $170 \si{\kelvin}$ ist.
@@ -47,3 +51,16 @@ Hierfür wird die Formel
 g_i &= \left( \increment \vartheta_{D i} \right) ^2
 \end{align}
 verwendet.
+
+\subsection{Theoretische berechnung von $\omega_D$ und $\theta_D$}
+Aus Gleichung () lässt sich $\omega_D$ berechnen. Dazu wurden
+$v_l = \SI{4,7}{\kilo\meter\per\second}$, $v_t = \SI{2,26}{\kilo\meter\per\second}$
+und $N=N_A \cdot \frac{m}{M}$ eingesetzt. Es ergibt sich
+\begin{equation}
+  \omega_D = \SI{4,3463 \cdot 10^{13}}{\per\second}.
+\end{equation}
+
+Daraus lässt sich $\theta_D$ bestimmen.
+\begin{equation}
+  \theta_D = \frac{\hbar\omega_D}{k_B} = \SI{331,98}{\kelvin}
+\end{equation}

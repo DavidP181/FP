@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.8)  19 DEC 2017 13:01
+This is LuaTeX, Version 0.95.0 (TeX Live 2016)  (format=lualatex 2016.10.8)  12 JAN 2018 13:51
  restricted system commands enabled.
 **BerichtV47.tex
 (./BerichtV47.tex
@@ -522,7 +522,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.383 seconds)
+luaotfload | main : initialization completed in 0.307 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/home/david/.local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-luatex.
 sty
@@ -1769,43 +1769,190 @@ Non-PDF special ignored!
 (load luc: /home/david/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/
 otl/lmroman8-regular.luc)(load luc: /home/david/.local/texlive/2016/texmf-var/lu
 atex-cache/generic/fonts/otl/lmroman6-regular.luc)
-[2])
+[2]) (./source/durchfuehrung.tex
+<Bilder_Plots/Aufbau.png, id=34, 510.90875pt x 568.1225pt>
+File: Bilder_Plots/Aufbau.png Graphic file (type png)
 
-Package caption Warning: Unused \captionsetup[sub] on input line 28.
-See the caption package documentation for explanation.
+<use Bilder_Plots/Aufbau.png>
+Package luatex.def Info: Bilder_Plots/Aufbau.png used on input line 4.
+(luatex.def)             Requested size: 418.25555pt x 465.09192pt.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 10.
-[3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 10.
- (./BerichtV47.aux
-Language ngerman already loaded; id is 8)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 10.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 10.
-Package rerunfilecheck Info: File `BerichtV47.aux' has not changed.
-(rerunfilecheck)             Checksum: 74FF30CE4282D256B9BB80130C8BD59A;2057.
+
+LaTeX Warning: Citation `V47' on page 3 undefined on input line 5.
+
+
+LaTeX Warning: Citation `V47' on page 3 undefined on input line 5.
+
+) (./source/Auswertung.tex [3] [4<./Bilder_Plots/Aufbau.png>]
+(./Tabellen/Widerstand1.tex
+Overfull \hbox (5.475pt too wide) detected at line 50
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 50
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 51
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 51
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 52
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 52
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 53
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 53
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 54
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 54
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 55
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 55
+ 
+ []
+
 )
 
-Here is how much of LuaTeX's memory you used:
- 32529 strings out of 495118
- 100000,953878 words of node,token memory allocated
- 1553 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 129 glue, 1 kern, 49 attribute, 57 glue_spec, 49 at
-tribute_list, 1 write nodes
-   avail lists: 1:4,2:461,3:119,4:7,5:235,6:1434,7:456,8:93,9:447,10:6,11:192
- 35199 multiletter control sequences out of 65536+600000
- 77 fonts using 18822739 bytes
- 71i,11n,100p,8862b,746s stack positions out of 5000i,500n,10000p,200000b,100000s
-</home/david/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-math/latinm
-odern-math.otf></home/david/.local/texlive/2016/texmf-dist/fonts/opentype/public
-/lm-math/latinmodern-math.otf></home/david/.local/texlive/2016/texmf-dist/fonts/
-opentype/public/lm-math/latinmodern-math.otf></home/david/.local/texlive/2016/te
-xmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/david/.local/texl
-ive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/david/
-.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-Output written on BerichtV47.pdf (3 pages, 39456 bytes).
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-PDF statistics: 96 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 131072)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+(load luc: /home/david/.local/texlive/2016/texmf-var/luatex-cache/generic/fonts/
+otl/lmroman5-regular.luc) (./Tabellen/Widerstand2.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+
+Overfull \hbox (207.86322pt too wide) in paragraph at lines 36--36
+[] 
+ []
+
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi6!
+Missing character: There is no ö (U+00F6) in font cmmi6!
+Missing character: There is no ß (U+00DF) in font cmmi6!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+
+LaTeX Warning: Reference `tab:Messreihe2' on page 5 undefined on input line 41.
+
+(./Tabellen/C_v_Temp.tex
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ö (U+00F6) in font cmmi8!
+Missing character: There is no ß (U+00DF) in font cmmi8!
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+             
+l.32     &
+         {$\vartheta_D \si{\per\kelvin} $} & {$\sigma_{\vartheta_D} \si{\per...
+? x
+
+
+Here is how much of LuaTeX's memory you used:
+ 32627 strings out of 495118
+ 195335,1144653 words of node,token memory allocated 170473 words of node memory still in use:
+   5162 hlist, 29 vlist, 100 rule, 218 disc, 19 local_par, 4 dir, 1476 math, 698
+5 glue, 1117 kern, 75 penalty, 11 unset, 4399 glyph, 12 align_record, 7069 attri
+bute, 65 glue_spec, 7069 attribute_list, 11 temp, 1 align_stack, 9 write, 8 pdf_
+dest nodes
+   avail lists: 1:8,2:164,3:308,4:41,5:11,6:73,7:19,8:100,9:13,10:27,11:197
+ 35241 multiletter control sequences out of 65536+600000
+ 87 fonts using 21702423 bytes
+ 71i,23n,100p,8862b,1146s stack positions out of 5000i,500n,10000p,200000b,100000s
+</home/david/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-b
+old.otf></home/david/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm-mat
+h/latinmodern-math.otf></home/david/.local/texlive/2016/texmf-dist/fonts/opentyp
+e/public/lm-math/latinmodern-math.otf></home/david/.local/texlive/2016/texmf-dis
+t/fonts/opentype/public/lm-math/latinmodern-math.otf></home/david/.local/texlive
+/2016/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/david/.lo
+cal/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></hom
+e/david/.local/texlive/2016/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.ot
+f>
+Output written on BerichtV47.pdf (4 pages, 92196 bytes).
+
+PDF statistics: 97 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
