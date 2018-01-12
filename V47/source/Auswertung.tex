@@ -20,3 +20,30 @@ Der theoretische Grenzwert der Molwärme liegt bei
   C_V = 3R = \SI{24,942}{\joule\per\kelvin\mol}.
 \end{equation}
 Dieser wird ab $\SI{266,7}{\kelvin}$ überschritten.
+\subsection{Bestimmung der Debyetemperatur}
+In Tabelle [] ist eine zweite Messreihe aufgeführt, aus der die Wärmekapazität $C_V$ erneut bestimmt wird.
+Die Debye-Temperatur wird mithilfe der Tabelle 1 aus der Anleitung bestimmt.
+Dabei werden nur Messwerte betrachtet, bei denen die Temperatur der Probe kleiner als $170 \si{\kelvin}$ ist.
+Die Funktion $C_V(\frac{\vartheta_D}{T})$ wird zwischen den diskreten Werten für $\frac{\vartheta_D}{T}$ als linear angenommen.
+Aus der Interpolationsformel
+\begin{align}
+C_V - C_{V größer} &= \left( frac{\vartheta_D}{T} - \frac{\vartheta_{D größer}}{T} \right) \, \frac{C_{V kleiner} - C_V}{\vartheta_{D kleiner}- \vartheta_{D größer}} //
+\frac{\vartheta_D}{T} = \frac{\vartheta_{D größer}}{T} + \left( C_V - C_{V größer} \right) \frac{\vartheta_{D kleiner}}{T} - \frac{\vartheta_{D größer}}{T}{C_{V kleiner}- C_{V größer}}
+\end{align}
+kann die Größe $\frac{\vartheta_D}{T}$ aus den Messwerten bestimmt werden.
+Hierbei ist $C_{V größer}$ ausgehend vom Messwert der nächst größere Wert für $C_V$ aus der Tabelle und $C_{V kleiner}$ entsprechend der
+nächst kleinere Wert.
+Weiterhin ist $\frac{\vartheta_{D größer}}{T}$ der zugehörige Wert zu $C_{V größer}$ und $\frac{\vartheta_{D kleiner}}{T}$ der Wert zu $C_{V kleiner}$.
+In Tabelle \ref{tab:Messreihe2} sind alle berechneten Größen aufgeführt.
+\input{Tabellen/C_v_Temp.tex}
+In der letzten Spalte ist das $\vartheta_D$ explizit berechnet.
+Die gewichtete Mittelung ergibt den Wert
+\begin{align}
+  \vartheta_{D mittel} = 203.33 \, \si{\Kelvin}
+\end{align}
+Hierfür wird die Formel
+\begin{align}
+    \vartheta_{D mittel} &= \frac{\sum_{\mathclap{i}}  \vartheta_{D mittel} g_i}{\sum_{\mathclap{i}} g_i}
+g_i &= \left( \increment \vartheta_{D i} \right) ^2
+\end{align}
+verwendet.
